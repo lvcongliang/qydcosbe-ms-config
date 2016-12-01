@@ -1,0 +1,48 @@
+
+
+zuul:
+  routes:
+    paas:
+      sensitiveHeaders:
+      url: ${openshift.url}
+    uaa:
+      sensitiveHeaders:
+      url: ${qy-auth.url}/uaa
+  add-proxy-headers: true
+  ignored-headers: Access-Control-Allow-Origin,
+                   Access-Control-Allow-Methods,
+                   Access-Control-Allow-Headers,
+                   Access-Control-Max-Age
+
+
+ribbon:
+  eureka:
+    enabled: false
+
+server:
+  port: 8080
+
+openshift:
+  url: https://192.168.99.100:8443
+
+qy-auth:
+  url: http://192.168.1.97:9999
+security:
+  basic:
+    enabled: false
+  oauth2:
+    resource:
+      id: service
+      user-info-uri: ${qy-auth.url}/uaa/user
+    client:
+      accessTokenUri: http://localhost:${server.port}/uaa/oauth/token
+      userAuthorizationUri: /uaa/oauth/authorize
+      clientId: qy-client
+      clientSecret: 123456
+  ignored: /uaa/**
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+
