@@ -8,6 +8,8 @@ zuul:
     uaa:
       sensitiveHeaders:
       url: ${qy-auth.url}/uaa
+    caas-service:
+      url: http://192.168.1.98:8807
   add-proxy-headers: true
   ignored-headers: Access-Control-Allow-Origin,
                    Access-Control-Allow-Methods,
