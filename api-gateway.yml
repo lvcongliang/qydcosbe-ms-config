@@ -1,7 +1,5 @@
 zuul:
   routes:
-    qy-iaas:
-      url: http://192.168.1.106:8080
     paas:
       sensitiveHeaders:
       url: ${openshift.url}
@@ -12,6 +10,9 @@ zuul:
       url: http://192.168.1.98:8807
     caas-helm:
       url: http://192.168.1.168:30188
+    pservice:
+      sensitiveHeaders:
+      url: http://localhost:8082
   add-proxy-headers: true
   ignored-headers: Access-Control-Allow-Origin,
                    Access-Control-Allow-Methods,
