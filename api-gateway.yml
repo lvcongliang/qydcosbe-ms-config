@@ -13,6 +13,9 @@ zuul:
     pservice:
       sensitiveHeaders:
       url: http://localhost:8082
+    monitor:
+      sensitiveHeaders:
+      url: http://115.182.246.72:32090
   add-proxy-headers: true
   ignored-headers: Access-Control-Allow-Origin,
                    Access-Control-Allow-Methods,
@@ -31,7 +34,7 @@ openshift:
   url: https://192.168.1.168:8443
 
 qy-auth:
-  url: http://192.168.1.97:9999
+  url: http://localhost:9999
 security:
   basic:
     enabled: false
