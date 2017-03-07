@@ -7,9 +7,19 @@ zuul:
       sensitiveHeaders:
       url: ${qy-auth.url}/uaa
     caas-service:
+      sensitiveHeaders:
       url: http://192.168.1.98:8807
     caas-helm:
       url: http://192.168.1.168:30188
+    iaas-service:
+      sensitiveHeaders:
+      url: http://localhost:8810
+    qy-iaas:
+      sensitiveHeaders:
+      url: http://192.168.1.106:8080
+    qy-task:
+      sensitiveHeaders:
+      url: http://192.168.1.106:8081
     pservice:
       sensitiveHeaders:
       url: http://localhost:8082
@@ -34,7 +44,7 @@ openshift:
   url: https://192.168.1.168:8443
 
 qy-auth:
-  url: http://localhost:9999
+  url: http://192.168.1.97:9999
 security:
   basic:
     enabled: false
