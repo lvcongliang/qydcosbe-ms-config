@@ -25,7 +25,7 @@ zuul:
       url: http://localhost:8082
     monitor:
       sensitiveHeaders:
-      url: http://115.182.246.72:32090
+      url: http://192.168.1.94:48504
   add-proxy-headers: true
   ignored-headers: Access-Control-Allow-Origin,
                    Access-Control-Allow-Methods,
@@ -66,5 +66,3 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8801/eureka/
-
-
