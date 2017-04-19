@@ -44,7 +44,7 @@ openshift:
   url: https://10.100.100.20:8443
 
 qy-auth:
-  url: http://localhsot:9999
+  url: http://localhost:9999
 security:
   basic:
     enabled: false
