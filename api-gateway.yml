@@ -41,10 +41,10 @@ server:
   port: 8080
 
 openshift:
-  url: https://10.100.100.20:8443
+  url: https://192.168.1.94:8443
 
 qy-auth:
-  url: http://localhost:9999
+  url: http://192.168.1.97:9999
 security:
   basic:
     enabled: false
