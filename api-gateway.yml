@@ -41,7 +41,7 @@ server:
   port: 8080
 
 openshift:
-  url: https://192.168.1.94:8443
+  url: https://192.168.1.168:8443
 
 qy-auth:
   url: http://192.168.1.97:9999
