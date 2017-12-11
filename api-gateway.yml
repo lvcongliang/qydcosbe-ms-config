@@ -1,4 +1,7 @@
 zuul:
+  host:
+   connect-timeout-millis: 600000
+   socket-timeout-millis: 600000
   routes:
     paas:
       sensitiveHeaders:
@@ -66,3 +69,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8801/eureka/
+spring:
+ http:
+  multipart:
+   max-file-size: '1024MB'
+   max-request-size: '1024MB'
